@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jinlongfeng.mapper.SysModelFunMapper">
+	<select id="getPKByModelAndFunId" resultType="int">
+		select id from model_fun where model_id = #{modelId} and fun_id = #{funId}
+	</select>
+</mapper>

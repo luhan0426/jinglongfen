@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jinlongfeng.mapper.ISysPermitMapper">
+	<delete id="clearByRoleId">
+		delete from permit where role_id = #{roleId}
+	</delete>
+	<insert id="insert">
+		insert into permit (role_id,model_fun_id) values (#{roleId},#{modelFunId})
+	</insert>
+	<delete id="deleteByRoleIdAndModelFunId">
+		delete from permit where role_id = #{roleId} and model_fun_id = #{modelFunId}
+	</delete>
+</mapper>
